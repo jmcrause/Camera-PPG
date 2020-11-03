@@ -26,4 +26,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation files('libs/graphlib.jar')
+    api 'com.otaliastudios:cameraview:2.6.4'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }

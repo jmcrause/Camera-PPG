@@ -26,7 +26,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:visibility="invisible" />
+
+    <com.otaliastudios.cameraview.CameraView
+        android:id="@+id/camera"
+        android:layout_width="299dp"
+        android:layout_height="255dp"
+        android:layout_marginTop="32dp"
+        android:keepScreenOn="true"
+        app:cameraAudio="off"
+        app:cameraFlash="auto"
+        app:cameraFrameProcessingExecutors="1"
+        app:cameraFrameProcessingMaxHeight="360"
+        app:cameraFrameProcessingMaxWidth="480"
+        app:cameraFrameProcessingPoolSize="2"
+        app:cameraRequestPermissions="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+    </com.otaliastudios.cameraview.CameraView>
 
     <Button
         android:id="@+id/measure_button"
@@ -63,7 +84,7 @@
         app:srcCompat="@mipmap/heartrate"
         tools:ignore="ContentDescription" />
 
-    <com.softmoore.android.graphlib.GraphView
+    <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/graph_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -74,5 +95,39 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/mTextureView"
+        app:layout_constraintTop_toBottomOf="@+id/camera" />
+
+    <TextView
+        android:id="@+id/textGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/holo_green_dark"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/textBlue"
+        app:layout_constraintStart_toEndOf="@+id/textRed"
+        app:layout_constraintTop_toBottomOf="@+id/camera" />
+
+    <TextView
+        android:id="@+id/textBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="@android:color/holo_blue_dark"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/mTextureView"
+        app:layout_constraintTop_toBottomOf="@+id/camera" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
